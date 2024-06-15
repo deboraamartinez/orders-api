@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	app := application.New()
+	app := application.New(application.LoadConfig())
 	err := app.Start(context.TODO())
 	if err != nil {
 		fmt.Println("failed to start app:", err)
